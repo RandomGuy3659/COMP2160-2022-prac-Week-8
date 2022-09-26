@@ -214,6 +214,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 24752383911283394, guid: 649ad224ea03e1146b14d64d19faa2dd, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 24752383911283394, guid: 649ad224ea03e1146b14d64d19faa2dd, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 24752383911283394, guid: 649ad224ea03e1146b14d64d19faa2dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 24752383911283394, guid: 649ad224ea03e1146b14d64d19faa2dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 39665130137345092, guid: 649ad224ea03e1146b14d64d19faa2dd, type: 3}
       propertyPath: m_RootOrder
       value: 2
