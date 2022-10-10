@@ -5,12 +5,20 @@ using UnityEngine;
 public class Scorekeeper : MonoBehaviour
 {
     [SerializeField] private int coinPoints;
-    private int currentPoints;
-    public int CurrentPoints
+    private int currentPointsP1;
+    public int CurrentPointsP1
     {
         get
         {
-            return currentPoints;
+            return currentPointsP1;
+        }
+    }
+    private int currentPointsP2;
+    public int CurrentPointsP2
+    {
+        get
+        {
+            return currentPointsP2;
         }
     }
 
@@ -48,7 +56,19 @@ public class Scorekeeper : MonoBehaviour
 
     public void IncreaseScore(int player)
     {
-        currentPoints += coinPoints;
-        Debug.Log("Current Points: " + currentPoints);
+        if (player == 1)
+        {
+            currentPointsP1 += coinPoints;
+        }
+        else if (player == 2)
+        {
+            currentPointsP2 += coinPoints;
+        }
+        else
+        {
+            Debug.LogError("Player ID invalid: Who grabbed that coin?");
+        }
+
     }
 }
+//this is Version 2
