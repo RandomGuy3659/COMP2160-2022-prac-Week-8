@@ -46,7 +46,7 @@ public class Scorekeeper : MonoBehaviour
         
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int player)
     {
         currentPoints += coinPoints;
         Debug.Log("Current Points: " + currentPoints);

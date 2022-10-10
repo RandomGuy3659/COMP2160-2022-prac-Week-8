@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class CoinBehaviour : MonoBehaviour
 {
-
-    [SerializeField] private GameObject player;
-
-    private Collider playerCollider;
     private Scorekeeper scorekeeper;
     void Start()
     {
-        playerCollider = player.GetComponent<Collider>();
         scorekeeper = FindObjectOfType<Scorekeeper>();
         
     }
@@ -24,12 +19,21 @@ public class CoinBehaviour : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("TriggerEnter" + other.name);
-        if (other.Equals(playerCollider))
+        int playerNum = 0;
+        if(other.gameObject.name == "Player 1")
         {
-            Destroy(gameObject);
-            scorekeeper.IncreaseScore();
-            
+            playerNum = 1;
         }
+        else if(other.gameObject.name == "Player 2")
+        {
+            playerNum = 2;
+        }
+        else
+        {
+            Debug.Log("unknown collider");
+        }
+            Destroy(gameObject);
+            scorekeeper.IncreaseScore(playerNum);
+            
     }
 }
